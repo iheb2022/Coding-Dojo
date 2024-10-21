@@ -1,0 +1,137 @@
+*{
+  padding: 0;
+  margin: 0; 
+  font-family: cursive;
+}
+.container{
+  width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.bignav {
+  background-color: #9FC5F8;
+}
+
+.nav{
+  width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+
+}
+ul{
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+}
+.san{
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+.temp{
+  display: flex;
+}
+select{
+  border: 2px solid;
+  margin-left: 5px;
+}
+hr{
+  border: 1px solid;
+  /* width: 1150px; */
+  /* position: relative; */
+  /* left: 360px; */
+}
+img{
+  border-radius: 50%;
+  width: 130px;
+}
+.today{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 350px;
+  width: 200px;
+  background-color: #EEEEEE;
+  border-radius: 5px;
+}
+
+.Tomorrow{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 350px;
+  width: 200px;
+  background-color: #EEEEEE;
+  border-radius: 5px;
+}
+.Friday{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 350px;
+  width: 200px;
+  background-color: #EEEEEE;
+  border-radius: 5px;
+}
+.Saturday{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  height: 350px;
+  width: 200px;
+  background-color: #EEEEEE;
+  border-radius: 5px;
+}
+.allofweather{
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  margin-top: 30px;
+}
+.colordh{
+  display: flex;
+  gap: 50px;
+  margin: 10px;
+}
+.hot{
+  color: #CF2A27;
+  margin: 10px;
+}
+.cold{
+  color: #2B78E4;
+  margin: 10px;
+}
+.cookies{
+  padding: 0 40px;
+  display: flex;
+  gap:50px;
+  justify-content: center;
+  border: 2px solid;
+  position: fixed;
+  top: 800px;
+}
+.imgcookie{
+  width: 80px;
+  /* margin-right: 30px; */
+}
+.btn{
+  width: 100px;
+  height: 30px;
+  margin:30px 0px 0px 100px;
+  background-color: #9FC5F8;
+  border: 3px solid;
+  box-shadow: 0 2px 2px 0;
+}

@@ -1,0 +1,41 @@
+
+.Search{
+  background-color: rgb(255, 253, 253);
+  color: rgb(51, 164, 51);
+  border-color: rgb(51, 164, 51);
+  border-radius: 50px;
+  display: block;
+  height: 25px;
+  width: 130px;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  font-weight: 200;
+  border: 2px solid  rgb(51, 164, 51);
+  
+}
+.plus{
+  color: white;
+  background-color: rgb(51, 164, 51);
+  border-radius: 100px;
+  border-width: 0px;
+  height: 30px;
+  width: 30px;
+  display: block;
+  margin-left: 50px;
+  margin-bottom: 10px;
+  
+}
+.create{
+  height: 30px;
+  width: 160px;
+  color: white;
+  background-color: blue;
+  margin-left: 50px;
+  border: 2px solid #000;
+  box-shadow: 10px, 10px rgb(255, 0, 0);
+ 
+  
+}
+div {
+  
+}

@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+
+.all{
+    margin-left: 30%; 
+    margin-top: 80px;
+    border-color: grey;
+    border-style: solid;
+    width: 600px;
+
+
+}
+.blu{
+    background-color: #17A2B8;
+    height: 90px;
+    width: 600px;
+    
+    
+}
+.jane{
+    background-color: white;
+
+    width: 590px;
+    height: 180px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+.userpic img{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    top: 150px;
+    margin-left: 10px;
+}
+a{
+    margin-top: 10px;
+}

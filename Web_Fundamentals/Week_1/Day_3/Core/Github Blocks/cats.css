@@ -1,0 +1,52 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  display: flex;
+  justify-content: center;
+  
+}
+
+h1{
+  text-align: center;
+  justify-content: center;
+}
+
+
+.one{
+  background-color: aqua;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 20px;
+  
+}
+
+.two{
+  background-color: darkmagenta;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.three{
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+  
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}

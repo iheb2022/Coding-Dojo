@@ -1,0 +1,31 @@
+body{
+  display: block;
+}
+.hey{
+  padding: 10px;
+  margin: 10px;
+}
+
+
+h1{
+  background-color: black;
+  color: white;
+  
+  font-family: cursive;
+}
+h2{
+  text-align: center;
+  background-color: blueviolet;
+  color: white;
+ 
+  font-style: italic;
+  
+}
+h3{
+  text-decoration: underline;
+  text-align: right;
+  background-color: rgb(160, 186, 236);
+}
+samp {
+  color: aqua;
+}
