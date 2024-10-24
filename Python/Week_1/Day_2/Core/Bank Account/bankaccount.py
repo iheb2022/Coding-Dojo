@@ -22,7 +22,12 @@ user1= BankAccount(0.1,200)
 user2= BankAccount(0.1,300)
 
 
-user1.deposit(100).deposit(200).deposit(50).withdraw(80).yield_interest().display_account_info()
+user1.deposit(100)
+user1.deposit(200)
+user1.deposit(50)
+user1.withdraw(80)
+user1.yield_interest()
+user1.display_account_info()
 user2.deposit(300).deposit(30).withdraw(10).withdraw(40).withdraw(20).withdraw(15).yield_interest().display_account_info()
 
 

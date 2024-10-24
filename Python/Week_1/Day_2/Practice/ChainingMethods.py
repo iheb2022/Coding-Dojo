@@ -14,14 +14,17 @@ class User:
     print(self.age)
     print(self.is_rewards_member)
     print(self.gold_card_point)
+    return self
 
   
   def enroll(self):
     self.is_rewards_member=True
     self.gold_card_point=200
+    return self
 
   def spend_points(self,amount):
     self.gold_card_point=self.gold_card_point -(amount)
+    return self
 
 
 
