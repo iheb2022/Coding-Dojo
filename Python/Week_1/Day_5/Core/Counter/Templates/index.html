@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=“UTF-8”>
+    <title>Visitor Counter</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0 auto;
+        }
+        .button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .button-click {
+            background-color: blue;
+        }
+        .button-reset {
+            background-color: red;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Counter</h1>
+        <p>{{ session['counter'] }} times</p>
+        <form action="/count" method="get">
+            <button class="button button-click ">Click</button>
+        </form>
+        <form action="/destroy_session" method="get">
+            <button class=" button button-reset ">Reset</button>
+        </form>
+    </div>
+</body>
+
+</html>

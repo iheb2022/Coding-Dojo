@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body{
+      margin: 0;
+      padding: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
+  <title>Great Number Game</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the Great Number Game!!!</h1>
+    <h6>I am thinking of a number between 1 and 100</h6>
+    <div class="column">
+      <h3>Take a guess!!!</h3>
+      <form action="/submit" method="POST">
+        <input type="text" name="guess">
+        <button>GUESS</button>
+      </form>
+    </div>
+    {% if 'guess' in session %}
+        {% if session['guess']==session['num'] %}
+        <h2 style="color: rgb(255, 255, 255);background-color: green;">{{ guess }}You got the number!</h2>
+        {% elif session['guess'] < session['num'] %}
+        <h2 style="color: rgb(255, 255, 255);background-color: red;">{{guess}} Too low!!!</h2>
+        {% else %}
+        <h2 style="color: rgb(255, 255, 255);background-color: red;">{{guess}}Too hight!!!</h2>
+        {% endif %}
+    {% endif %}
+    <a href="/reset"><button>Reset</button></a>
+  </div>
+</body>
+</html>
