@@ -2,7 +2,7 @@
 
 .container{
   margin: 0 auto;
-  background-color: rgb(217, 0, 0);
+  background-color: rgb(128, 109, 109);
   width: 800px;
   display: flex;
   align-items: start;
@@ -23,7 +23,7 @@ p{
   color: white;
 }
 h1{
-  color: rgb(245, 245, 4);
+  color: rgb(4, 92, 245);
 }
 input{
   height:50px ;
@@ -33,5 +33,5 @@ select{
 }
 
 button{
-  background-color: rgba(215, 215, 62, 0.874);
+  background-color:rgb(4, 92, 245);
 }
