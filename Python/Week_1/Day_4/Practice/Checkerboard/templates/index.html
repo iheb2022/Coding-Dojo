@@ -29,19 +29,20 @@
             justify-content: center;
             align-items: center;
             margin: 0;
+            padding: 0 auto;
             height: 100vh;
         }
     </style>
 </head>
 <body>
-  <table>
-      {% for i in range(insidebox) %}
-      <tr>  
-          {% for j in range(outsidebox)) %}
-          <td class='color{{ i+j%2 }}'></td>
-          {% endfor %}
-      </tr>
-      {% endfor %}
-  </table>
+    <table>
+    {% for i in range(insidebox) %}
+        <tr>  
+            {% for j in range (outsidebox)%}
+                <td class="{% if(i+j)%2==0 %}color1{% else %}color2{% endif %}"></td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+    </table>
 </body>
 </html>
