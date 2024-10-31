@@ -1,0 +1,6 @@
+INSERT INTO names (full_name) VALUES ("iheb cherni"),("ezedin mej"),("fares jm");
+SELECT * FROM names;
+SELECT * FROM names WHERE id=1;
+DELETE FROM names WHERE id=3;
+UPDATE names SET full_name="mohamed bn" WHERE id=1;
+SELECT * FROM names;
