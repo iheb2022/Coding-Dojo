@@ -25,7 +25,6 @@ def logout():
 
 @app.route('/recipe/create', methods=["POST"])
 def add_recipe():
-    print("Form data:", request.form) 
     if "user_id" not in session:
         return redirect('/')
     if Recipe.validate(request.form):

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login & Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(135deg, #c70848 0%, #0920a6 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      transition: background 0.5s ease;
+    }
+    .card {
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      overflow: hidden;
+      position: relative;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+    .card-header {
+      background: #343a40;
+      color: white;
+      font-weight: bold;
+      transition: background 0.5s ease;
+    }
+    .form-section {
+      padding: 25px;
+    }
+    .border-right {
+      border-right: 1px solid #dee2e6;
+    }
+    @media (max-width: 768px) {
+      .border-right {
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+        padding-bottom: 25px;
+        margin-bottom: 25px;
+      }
+    }
+    body.dark-mode {
+      background: linear-gradient(135deg, #1e1e2f 0%, #101018 100%);
+      color: #f0f0f0;
+    }
+    body.dark-mode .card {
+      background-color: #181827;
+      color: #fff;
+    }
+    body.dark-mode .card-header {
+      background: #111120;
+      color: #fff;
+    }
+    body.dark-mode input,
+    body.dark-mode .form-control {
+      background-color: #2a2a3b;
+      color: #fff;
+      border-color: #555;
+    }
+    body.dark-mode .form-control::placeholder {
+      color: #ccc;
+    }
+    body.dark-mode .btn-primary {
+      background-color: #4b7bec;
+      border-color: #4b7bec;
+    }
+    body.dark-mode .btn-success {
+      background-color: #2ecc71;
+      border-color: #2ecc71;
+    }
+    body.dark-mode .alert {
+      background-color: #2b2b40;
+      border-color: #3b3b5c;
+      color: #f1f1f1;
+    }
+    body.dark-mode label {
+      color: #e0e0e0;
+    }
+    #toggle-dark {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+    #toggle-dark:hover {
+      transform: scale(1.1);
+    }
+    body.dark-mode #toggle-dark {
+      background: #333;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="card">
+          <button id="toggle-dark" title="Toggle Dark Mode">🌙</button>
+          <div class="card-header text-center py-3">
+            <h2>Welcome to Book Club</h2>
+          </div>
+          <div class="card-body p-0">
+            <div class="row g-0">
+              <div class="col-md-6 border-right">
+                <div class="form-section">
+                  <h4 class="text-center mb-4">Register</h4>
+                  <form action="/register" method="POST">
+                    <div class="mb-3">
+                      <label class="form-label">First Name</label>
+                      <input type="text" name="first_name" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Last Name</label>
+                      <input type="text" name="last_name" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Email</label>
+                      <input type="email" name="email" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Password</label>
+                      <input type="password" name="password" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Confirm Password</label>
+                      <input type="password" name="confirm" class="form-control" required />
+                    </div>
+                    <button class="btn btn-success w-100">Register</button>
+                  </form>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-section">
+                  <h4 class="text-center mb-4">Login</h4>
+                  <form action="/login" method="POST">
+                    <div class="mb-3">
+                      <label class="form-label">Email</label>
+                      <input type="email" name="email" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                      <label class="form-label">Password</label>
+                      <input type="password" name="password" class="form-control" required />
+                    </div>
+                    <button class="btn btn-primary w-100">Log In</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="p-4">
+              {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                  {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} mb-0">{{ message }}</div>
+                  {% endfor %}
+                {% endif %}
+              {% endwith %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const toggleBtn = document.getElementById("toggle-dark");
+    if(localStorage.getItem("darkMode") === "enabled") {
+      document.body.classList.add("dark-mode");
+      toggleBtn.textContent = "☀️";
+    } else {
+      toggleBtn.textContent = "🌙";
+    }
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+      if(document.body.classList.contains("dark-mode")) {
+        toggleBtn.textContent = "☀️";
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        toggleBtn.textContent = "🌙";
+        localStorage.setItem("darkMode", "disabled");
+      }
+    });
+  </script>
+</body>
+</html>

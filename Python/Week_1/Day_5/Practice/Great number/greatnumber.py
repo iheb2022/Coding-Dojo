@@ -8,7 +8,7 @@ import random
 @app.route('/')
 def home():
     if 'num' not in session:
-      session['num']=random.randint(1,100)
+    session['num']=random.randint(1,100)
     return render_template('index.html')
     
 

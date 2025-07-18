@@ -1,4 +1,4 @@
-from flask import session,request,render_template,redirect  # type: ignore
+from flask import session, request, render_template, redirect  # type: ignore
 from flask_app import app
 from flask_app.models.user_model import User
 from flask import flash  # type: ignore
